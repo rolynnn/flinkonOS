@@ -1,0 +1,18 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: kafka
+spec:
+  replicas: 1
+  selector:
+    component: kafka
+  template:
+    metadata:
+      labels:
+        component: kafka
+    spec:
+      containers:
+        - name: kafka
+          image: mjelen/kafka:latest
+          ports:
+            - containerPort: 9092

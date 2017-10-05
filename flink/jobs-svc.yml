@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: flink
+spec:
+  selector:
+    component: flink
+  ports:
+    - port: 6123
+      targetPort: 6123
+      name: flink
+    - port: 8081
+      targetPort: 8081
+      name: web
+    - port: 50101
+      targetPort: 50101
+      name: blobs

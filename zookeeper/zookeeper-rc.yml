@@ -1,0 +1,18 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: zookeeper
+spec:
+  replicas: 1
+  selector:
+    component: zookeeper
+  template:
+    metadata:
+      labels:
+        component: zookeeper
+    spec:
+      containers:
+        - name: zookeeper
+          image: mjelen/zookeeper:latest
+          ports:
+            - containerPort: 2181

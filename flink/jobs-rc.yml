@@ -1,0 +1,20 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: flink
+spec:
+  replicas: 1
+  selector:
+    component: flink
+  template:
+    metadata:
+      labels:
+        component: flink
+    spec:
+      containers:
+        - name: flink
+          image: mjelen/flink:latest
+          args: ["jobs"]
+          ports:
+            - containerPort: 6123
+            - containerPort: 8081

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ZEPPELIN_ADDR=0.0.0.0 ZEPPELIN_SSL_PORT=8443 ZEPPELIN_PORT=8080 ./bin/zeppelin.sh

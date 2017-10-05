@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: spark
+spec:
+  selector:
+    component: spark
+  ports:
+    - port: 7077
+      targetPort: 7077
+      name: flink
+    - port: 8080
+      targetPort: 8080
+      name: web

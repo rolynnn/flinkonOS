@@ -1,0 +1,20 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: spark
+spec:
+  replicas: 1
+  selector:
+    component: spark
+  template:
+    metadata:
+      labels:
+        component: spark
+    spec:
+      containers:
+        - name: spark
+          image: mjelen/spark:latest
+          args: ["master"]
+          ports:
+            - containerPort: 7077
+            - containerPort: 8080
