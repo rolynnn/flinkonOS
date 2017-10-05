@@ -18,6 +18,7 @@ reated by https://www.gitignore.io/api/intellij
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 .idea/*
+*.iml
 
 # Gradle:
 .idea/**/gradle.xml
