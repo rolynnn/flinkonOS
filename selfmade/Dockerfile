@@ -12,3 +12,4 @@ RUN tar -xf flink-1.3.2-bin-hadoop27-scala_2.11.tgz && \
     rm -f flink-1.3.2-bin-hadoop27-scala_2.11.tgz
 
 EXPOSE 6123 8081
+COMMAND ["/bin/bash","flink-1.3.2/bin/start-local.sh"]
